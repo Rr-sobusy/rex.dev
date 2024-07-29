@@ -4,9 +4,19 @@
 
 @layer base {
   :root {
-    --foreground-rgb: 0 0 7;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --background-hsl: 240 8 97;
+    --foreground-hsl: 113 24 7;
+    --primary: 140 49 53;
   }
+
+  .dark {
+    --background-hsl: 113 24 7;
+    --foreground-hsl: 240 8 97;
+    --primary: 140 49 53;
+  }
+
 }
 
+body {
+  
+}
