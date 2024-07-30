@@ -1,11 +1,12 @@
 import RootLayout from "@/components/layout/root-layout";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <RootLayout>
-      <p className="text-foreground/80 text-2xl font-extrabold font-poppins tracking-tight">
-        rex randy
-      </p>
+      <div className="bg-boxesBackground bg-boxesSize">
+        <Image height={300} width={250} alt="heroimage" src="/hero-image.png" />
+      </div>
     </RootLayout>
   );
 }

@@ -6,17 +6,23 @@
   :root {
     --background-hsl: 240 8 97;
     --foreground-hsl: 113 24 7;
+    --accent-hsl: 0 0 93;
     --primary: 140 49 53;
   }
 
   .dark {
-    --background-hsl: 113 24 7;
-    --foreground-hsl: 240 8 97;
-    --primary: 140 49 53;
-  }
-
-}
-
-body {
+     --background-hsl: 113 24 7;
+     --foreground-hsl: 240 8 97;
+     --accent-hsl: 0 0 19;
+     --primary: 140 49 53;
+   }
+   }
   
-}
+   @layer base {
+     .box-container {
+       --color: #E1E1E1;
+       background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%),
+         linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%);
+       background-size: 55px 55px;
+     }
+   }
