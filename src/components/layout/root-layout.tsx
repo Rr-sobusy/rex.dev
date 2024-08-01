@@ -17,7 +17,7 @@ const fontPoppins = Poppins({
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <div className={`${fontPoppins.variable} min-w-screen `}>
+    <div className={`${fontPoppins.variable} min-w-screen px-3 md:px-0`}>
       <div className="max-w-5xl flex flex-col mx-auto">
         <Header />
         <main>{children}</main>

@@ -26,7 +26,7 @@ const Header = ({ className }: HeaderProps) => {
           <FlexBox
             justifyContent="evenly"
             alignItems="center"
-            className="gap-7 font-medium"
+            className="gap-7 font-medium hidden md:flex"
           >
             <p className="font-poppins text-foreground/85">About</p>
             <p className="font-poppins text-foreground/85">Projects</p>
