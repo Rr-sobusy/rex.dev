@@ -26,6 +26,7 @@ const config: Config = {
         foreground: "hsl(var(--foreground-hsl))",
         backgroundAccent: "hsl(var(--accent-hsl))",
         primary: "hsl(var(--primary))",
+        primaryAccent: "#42BFC7"
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
