@@ -11,8 +11,8 @@ type HeroProps = {};
 const Hero = ({ ...props }: HeroProps) => {
   return (
     <section {...props}>
-      <FlexBox className="md:mt-14 mt-5 flex flex-col md:flex-row">
-        <FlexBox className="flex-1" flexDirection="col">
+      <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-10 md:gap-8 lg:gap-0">
+        <FlexBox className="flex-1 sm:mt-5" flexDirection="col">
           <h5 className="font-poppins text-base text-foreground/85">
             Hi there, I'm
           </h5>
@@ -34,7 +34,7 @@ const Hero = ({ ...props }: HeroProps) => {
             />
           </h1>
           <h5 className="font-poppins text-sm text-foreground/70 mt-1">
-            My bring up the concepts and edges of technology to build a
+            My hobby is to bring up the concepts and edges of technology to build a
             something significant.I have a strong passion for creating a neat
             and readable sets of code while following the principles of UI/UX
             design systems.
@@ -44,7 +44,7 @@ const Hero = ({ ...props }: HeroProps) => {
             <Button variant="outlined">Github Profile</Button>
           </FlexBox>
         </FlexBox>
-        <FlexBox className="flex-1 justify-start">
+        <FlexBox className="flex-1 justify-center">
           <Image
             className=""
             height={550}
