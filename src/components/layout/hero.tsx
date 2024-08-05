@@ -12,12 +12,12 @@ type HeroProps = {};
 const Hero = ({ ...props }: HeroProps) => {
   return (
     <section {...props}>
-        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row lg:min-h-[calc(100vh-55px)] pt-14 md:pt-[8rem] w-full relative">
-          <FlexBox className="flex-1 sm:mt-5 gap-2" flexDirection="col">
+        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row min-h-[90vh] lg:min-h-[calc(100vh-55px)] pt-14 md:pt-[8rem] w-full relative">
+          <FlexBox className="flex-1 sm:mt-5 gap-2 border" flexDirection="col">
             <h5 className="font-poppins text-base text-foreground/85">
               Hi there &#128075;, I'm
             </h5>
-            <h1 className="text-3xl md:text-5xl font-extrabold font-poppins tracking-tight text-foreground/85 h-[4.5rem] md:h-[6rem]">
+            <h1 className="text-4xl md:text-5xl font-extrabold font-poppins tracking-tight text-foreground/85">
               Rex Randy, an{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-tr from-primaryAccent to-primary">
                 aspiring{" "}
@@ -25,9 +25,9 @@ const Hero = ({ ...props }: HeroProps) => {
               <TypeAnimation
                 sequence={[
                   "Fullstack Developer.",
-                  2000,
+                  5000,
                   "Tech Enthusiast.",
-                  2000,
+                  5000,
                 ]}
                 wrapper="span"
                 speed={50}
@@ -45,7 +45,7 @@ const Hero = ({ ...props }: HeroProps) => {
               <Button variant="outlined">Github Profile</Button>
             </FlexBox>
           </FlexBox>
-          <FlexBox className="flex-1">
+          <FlexBox className="flex-1 border">
             <Image
               width={800}
               height={700}

@@ -17,7 +17,7 @@ const Header = ({ className }: HeaderProps) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <header className={cn("w-full py-3 h-[55px] fixed max-w-6xl mx-auto", className)}>
+    <header className={cn("py-3 h-[55px] fixed max-w-6xl rounded-lg top-2 w-full translate-x-[-50%] left-1/2 mx-auto z-50", className)}>
       <FlexBox justifyContent="between" alignItems="center" flexDirection="row">
         <h5 className="text-2xl bg-clip-text bg-gradient-to-r text-transparent to-primary from-[#42BFC7] font-extrabold font-poppins">
           rex.dev
