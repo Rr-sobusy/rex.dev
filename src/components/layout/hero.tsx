@@ -12,7 +12,7 @@ type HeroProps = {};
 const Hero = ({ ...props }: HeroProps) => {
   return (
     <section {...props}>
-      <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-8 lg:gap-0 lg:min-h-[calc(100vh-55px)] pt-14 md:pt-[8rem] w-full relative">
+      <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-16 lg:gap-0 lg:min-h-[calc(100vh-55px)] pt-14 md:pt-[8rem] w-full relative">
         <FlexBox className="flex-1 sm:mt-5 gap-2" flexDirection="col">
           <h5 className="font-poppins text-base text-foreground/85">
             Hi there &#128075;, I'm
@@ -22,7 +22,7 @@ const Hero = ({ ...props }: HeroProps) => {
             <span className="bg-clip-text text-transparent bg-gradient-to-tr from-primaryAccent to-primary">
               aspiring&nbsp;
             </span>
-            Fullstack Developer
+            Fullstack Developer.
           </h1>
           <h5 className="font-poppins text-foreground/70 mt-1">
             My hobby is to bring up the concepts and edges of technology to
