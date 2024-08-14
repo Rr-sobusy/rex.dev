@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { FlexBox } from "../Flexbox";
 import Image from "next/image";
@@ -24,10 +22,10 @@ const Hero = ({ ...props }: HeroProps) => {
             x: 0,
           },
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: .9, ease: "easeInOut" }}
         viewOptions={{ margin: "0px 0px -350px 0px" }}
       >
-        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-16 lg:gap-0 lg:min-h-[calc(100vh-55px)] pt-14 md:pt-[8rem] w-full relative">
+        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-16 lg:gap-0 lg:min-h-[calc(100vh-80px)] pt-14 md:pt-[2rem] lg:pt-[8rem] w-full relative">
           <FlexBox className="flex-1 sm:mt-5 gap-2" flexDirection="col">
             <h5 className="font-poppins text-base text-foreground/85">
               Hi there &#128075;, I'm

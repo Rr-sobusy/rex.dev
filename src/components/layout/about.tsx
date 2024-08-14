@@ -6,8 +6,8 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section className="mt-8 reiative">
-      <h5 className="font-poppins sm:text-lg font-extrabold tracking-tight text-foreground/85">
+    <section id="About me" className="mt-8 min-h-screen">
+      <h5 className="font-poppins sm:text-lg font-extrabold tracking-wide text-foreground/85">
         About me
       </h5>
       <Separator />

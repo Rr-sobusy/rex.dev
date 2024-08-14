@@ -1,10 +1,9 @@
-"use client";
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { FlexBox } from "../Flexbox";
 import { Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import HeaderNav from "./header-nav";
 
 type HeaderProps = {
   className?: string;
@@ -17,7 +16,12 @@ const Header = ({ className }: HeaderProps) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <header className={cn("py-3 h-[55px] fixed max-w-6xl rounded-lg top-2 w-full translate-x-[-50%] left-1/2 mx-auto z-50", className)}>
+    <header
+      className={cn(
+        "py-3 h-[55px] fixed max-w-6xl rounded-lg top-2 w-full translate-x-[-50%] left-1/2 bg-background px-3 lg:px-0 mx-auto z-50",
+        className
+      )}
+    >
       <FlexBox justifyContent="between" alignItems="center" flexDirection="row">
         <h5 className="text-2xl bg-clip-text bg-gradient-to-r text-transparent to-primary from-[#42BFC7] font-extrabold font-poppins">
           rex.dev
@@ -28,9 +32,15 @@ const Header = ({ className }: HeaderProps) => {
             alignItems="center"
             className="gap-7 font-medium hidden md:flex"
           >
-            <p className="font-poppins text-foreground/85">About</p>
-            <p className="font-poppins text-foreground/85">Projects</p>
-            <p className="font-poppins text-foreground/85">About</p>
+            {["About", "Projects", "Contact"].map((content) => (
+              <HeaderNav
+              offset={-70}
+                className="font-poppins text-foreground/85 cursor-pointer"
+                to={content}
+              >
+                {content}
+              </HeaderNav>
+            ))}
             <button className="bg-primary/90 hover:bg-primary py-2 px-5 text-sm font-poppins flex items-center rounded-2xl text-background">
               Dm me
             </button>

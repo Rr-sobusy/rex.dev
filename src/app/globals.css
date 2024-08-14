@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background-hsl: 240 8 97;
+    --background-hsl: 0 0 100;
     --foreground-hsl: 113 24 7;
     --accent-hsl: 0 0 93;
     /* --primary: 140 49 53; */
@@ -13,13 +13,20 @@
 
   .dark {
      --background-hsl: 113 24 7;
-     --foreground-hsl: 240 8 97;
+     --foreground-hsl: 0 0 100;
      --accent-hsl: 0 0 19;
      --primary: 140 49 53;
    }
    }
   
    @layer base {
+
+
+    body {
+      @apply bg-background
+    }
+
+
     .loader {
       width: 44.8px;
       height: 44.8px;

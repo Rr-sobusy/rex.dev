@@ -9,8 +9,8 @@ export interface ButtonProps
 const buttonVariants = cva("px-5 py-2 font-poppins font-medium text-sm hover:shadow-md", {
   variants: {
     variant: {
-      outlined: "rounded-2xl border border-primary text-primary",
-      contained: "rounded-2xl bg-primary text-background/90"
+      outlined: "rounded-lg border border-primary text-primary",
+      contained: "rounded-lg bg-primary text-background/90"
     },
   },
 });
