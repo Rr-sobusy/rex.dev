@@ -32,9 +32,10 @@ const Header = ({ className }: HeaderProps) => {
             alignItems="center"
             className="gap-7 font-medium hidden md:flex"
           >
-            {["About", "Projects", "Contact"].map((content) => (
+            {["Home", "Projects", "About"].map((content) => (
               <HeaderNav
-              offset={-70}
+                key={content}
+                offset={-70}
                 className="font-poppins text-foreground/85 cursor-pointer"
                 to={content}
               >
