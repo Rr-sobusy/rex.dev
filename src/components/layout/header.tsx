@@ -18,7 +18,7 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <header
       className={cn(
-        "py-3 h-[55px] fixed max-w-6xl rounded-lg top-2 w-full translate-x-[-50%] left-1/2 bg-background px-3 lg:px-0 mx-auto z-50",
+        "py-3 h-[55px] fixed max-w-6xl top-0 w-full translate-x-[-50%] left-1/2 bg-background px-3 lg:px-0 mx-auto z-50",
         className
       )}
     >
