@@ -24,7 +24,7 @@ const Hero = ({ ...props }: HeroProps) => {
         transition={{ duration: 0.9, ease: "easeInOut" }}
         viewOptions={{ margin: "0px 0px -350px 0px" }}
       >
-        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-10 lg:gap-0 lg:min-h-[calc(100vh-57px)] pt-[6rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
+        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-14 lg:gap-0 lg:min-h-[calc(100vh-57px)] pt-[6rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
           <FlexBox className="flex-1 sm:mt-5 gap-2" flexDirection="col">
             <h5 className="font-poppins text-base text-foreground/85">
               Hi there &#128075;, I'm

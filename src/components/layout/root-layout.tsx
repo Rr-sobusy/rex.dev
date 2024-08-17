@@ -3,6 +3,10 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 
+//* Carousel library
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // layouts
 import Header from "./header";
 
