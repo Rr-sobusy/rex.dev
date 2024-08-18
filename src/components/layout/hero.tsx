@@ -51,7 +51,7 @@ const Hero = ({ ...props }: HeroProps) => {
               <Button variant="outlined">Github Profile</Button>
             </FlexBox>
           </FlexBox>
-          <FlexBox className="flex-1 w-3/4 md:w-1/2 mx-auto lg:w-full">
+          <FlexBox className="flex-1 w-3/4 md:w-3/5 mx-auto lg:w-full">
             <Image
               className="scale-110 md:scale-105 lg:scale-100"
               width={800}

@@ -9,7 +9,7 @@ const Separator = ({ className, ...props }: SeparatorProps) => {
   const Comp = "hr";
   return (
     <Comp
-      className={cn("border-b-[.50px] border-slate-100 dark:border-slate-800 w-full", className)}
+      className={cn("border-b-[.50px] border-foreground/10", className)}
       {...props}
     />
   );
