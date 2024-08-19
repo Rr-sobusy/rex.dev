@@ -2,7 +2,6 @@
 
 import React from "react";
 import { InView } from "../InView";
-import Slider from "react-slick";
 import Separator from "../Separator";
 import ProjectsContainer from "../ProjectsContainer";
 
@@ -28,24 +27,40 @@ const Projects = (ProjectsProps: ProjectsProps) => {
         every project that i have built.
       </h5>
       <Separator />
-      <InView
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: 100,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        transition={{ duration: 0.9, ease: "easeInOut" }}
-        viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
-      >
-        <div className="slider-container">
-          <ProjectsContainer />
-        </div>
-      </InView>
+      <div className="slider-container flex flex-col gap-8">
+        <InView
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 100,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+            },
+          }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
+          viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
+        >
+          <ProjectsContainer key={2} />
+        </InView>
+        <InView
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 100,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+            },
+          }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
+          viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
+        >
+          <ProjectsContainer key={2} />
+        </InView>
+      </div>
     </section>
   );
 };

@@ -24,10 +24,14 @@ const Hero = ({ ...props }: HeroProps) => {
         transition={{ duration: 0.9, ease: "easeInOut" }}
         viewOptions={{ margin: "0px 0px -350px 0px" }}
       >
-        <FlexBox className="md:mt-14 mt-10 flex flex-col lg:flex-row gap-14 lg:gap-0 lg:min-h-[calc(100vh-57px)] pt-[6rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
-          <FlexBox className="flex-1 sm:mt-5 gap-2" flexDirection="col">
+        <FlexBox className="md:mt-14 flex flex-col lg:flex-row gap-8 lg:gap-0 min-h-[calc(100vh-52px)] pt-[6rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
+          <FlexBox
+            className="flex-1 sm:mt-5 gap-2 border"
+            justifyContent="center"
+            flexDirection="col"
+          >
             <h5 className="font-poppins text-base text-foreground/85">
-              Hi there &#128075;, I'm
+              Hi there &#128075;, I&apos;m
             </h5>
             <h1 className="text-4xl font-extrabold font-poppins tracking-tight text-foreground/85">
               Rex Randy, an{" "}
@@ -51,7 +55,7 @@ const Hero = ({ ...props }: HeroProps) => {
               <Button variant="outlined">Github Profile</Button>
             </FlexBox>
           </FlexBox>
-          <FlexBox className="flex-1 w-3/4 md:w-3/5 mx-auto lg:w-full">
+          <FlexBox className="flex-1 sm:w-3/4 mx-auto md:w-2/3 border">
             <Image
               className="scale-110 md:scale-105 lg:scale-100"
               width={800}
@@ -62,7 +66,6 @@ const Hero = ({ ...props }: HeroProps) => {
           </FlexBox>
         </FlexBox>
       </InView>
-     
     </section>
   );
 };

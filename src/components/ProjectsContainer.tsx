@@ -20,15 +20,14 @@ const ProjectsContainer = (props: Props) => {
     >
       <div className="md:w-3/6 w-full">
         <Slider {...settings}>
-   
-            <Image
-              className="rounded-xl"
-              alt=""
-              width={600}
-              height={500}
-              src="/projects/coursespace/courses.png"
-            />
-    
+          <Image
+            className="rounded-xl"
+            alt=""
+            width={600}
+            height={500}
+            src="/projects/coursespace/courses.png"
+          />
+
           <div className="bg-blue-200 border">
             <h3>2</h3>
           </div>
@@ -52,13 +51,13 @@ const ProjectsContainer = (props: Props) => {
           Taskifier is web app that minifies the tidiness of managing tasks.
           Taskifier is web app that minifies the tidiness of managing tasks.
         </p>
-        <div className="flex flex-wrap gap-4">
-        <p className="font-poppins text-base font-medium">Tailwindcss</p>
-        <p className="font-poppins text-base font-medium">React</p>
-        <p className="font-poppins text-base font-medium">Nextjs</p>
-        <p className="font-poppins text-base font-medium">Shadcn-ui</p>
-        <p className="font-poppins text-base font-medium">Shadcn-ui</p>
-        <p className="font-poppins text-base font-medium">Shadcn-ui</p>
+        <div className="flex flex-wrap gap-2 px-3">
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">T#ailwindcss</p>
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#React</p>
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Nextjs</p>
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
+          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
         </div>
       </div>
     </FlexBox>
