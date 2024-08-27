@@ -1,19 +1,24 @@
-"use client";
-
 import React from "react";
-import { InView } from "../InView";
 import Separator from "../Separator";
 import ProjectsContainer from "../ProjectsContainer";
+import type { ProjectType } from "@/interfaces/ProjectType";
 
 type ProjectsProps = {};
-const settings = {
-  className: "center",
-  centerMode: true,
-  infinite: true,
-  centerPadding: "60px",
-  slidesToShow: 3,
-  speed: 500,
-};
+
+const projects: ProjectType[] = [
+  {
+    projectName: "Taskifier",
+    projectDescription: "Taskifier",
+    snapshotsUrl: [
+      "/projects/taskifier/1-min.png",
+      "/projects/taskifier/2-min.png",
+      "/projects/taskifier/3-min.png",
+      "/projects/taskifier/4-min.png"
+    ],
+    stacksUsed: ["Nextjs", "Reactjs"],
+  },
+];
+
 const Projects = (ProjectsProps: ProjectsProps) => {
   return (
     <section className="min-h-screen mt-12 md:mt-0" id="Projects">
@@ -28,38 +33,9 @@ const Projects = (ProjectsProps: ProjectsProps) => {
       </h5>
       <Separator />
       <div className="slider-container flex flex-col gap-8">
-        <InView
-          variants={{
-            hidden: {
-              opacity: 0,
-              y: 100,
-            },
-            visible: {
-              opacity: 1,
-              y: 0,
-            },
-          }}
-          transition={{ duration: 0.9, ease: "easeInOut" }}
-          viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
-        >
-          <ProjectsContainer key={2} />
-        </InView>
-        <InView
-          variants={{
-            hidden: {
-              opacity: 0,
-              y: 100,
-            },
-            visible: {
-              opacity: 1,
-              y: 0,
-            },
-          }}
-          transition={{ duration: 0.9, ease: "easeInOut" }}
-          viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
-        >
-          <ProjectsContainer key={2} />
-        </InView>
+        {projects.map((project) => (
+          <ProjectsContainer project={project} />
+        ))}
       </div>
     </section>
   );

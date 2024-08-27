@@ -1,9 +1,15 @@
+"use client";
+
 import React from "react";
 import { FlexBox } from "./Flexbox";
 import Slider from "react-slick";
 import Image from "next/image";
+import { InView } from "./InView";
+import type { ProjectType } from "@/interfaces/ProjectType";
 
-type Props = {};
+type ProjectContainerProps = {
+  project: ProjectType;
+};
 const settings = {
   className: "center",
   infinite: true,
@@ -11,56 +17,57 @@ const settings = {
   slidesToShow: 1,
   speed: 500,
 };
-const ProjectsContainer = (props: Props) => {
+const ProjectsContainer = ({ project }: ProjectContainerProps) => {
   return (
-    <FlexBox
-      display="flex"
-      className="mt-11 max-w-4xl mx-auto"
-      flexDirection="mdRow"
+    <InView
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 100,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      }}
+      transition={{ duration: 0.9, ease: "easeInOut" }}
+      viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
     >
-      <div className="md:w-3/6 w-full">
-        <Slider {...settings}>
-          <Image
-            className="rounded-xl"
-            alt=""
-            width={600}
-            height={500}
-            src="/projects/coursespace/courses.png"
-          />
-
-          <div className="bg-blue-200 border">
-            <h3>2</h3>
-          </div>
-          <div className="bg-blue-200 border">
-            <h3>3</h3>
-          </div>
-          <div className="bg-blue-200 border">
-            <h3>5</h3>
-          </div>
-          <div className="bg-blue-200 border">
-            <h3>5</h3>
-          </div>
-        </Slider>
-      </div>
-      <div className="md:w-2/4 w-full px-3 flex flex-col gap-3 justify-center">
-        <h5 className="font-extrabold font-poppins text-foreground/85 tracking-wide text-center uppercase text-base">
-          Taskifier
-        </h5>
-        <p className="text-center font-poppins text-foreground/75">
-          Taskifier is web app that minifies the tidiness of managing tasks.
-          Taskifier is web app that minifies the tidiness of managing tasks.
-          Taskifier is web app that minifies the tidiness of managing tasks.
-        </p>
-        <div className="flex flex-wrap gap-2 px-3">
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">T#ailwindcss</p>
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#React</p>
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Nextjs</p>
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
-          <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">#Shadcn-ui</p>
+      <FlexBox
+        display="flex"
+        className="mt-11 max-w-4xl mx-auto"
+        flexDirection="mdRow"
+      >
+        <div className="md:w-3/6 w-full">
+          <Slider {...settings}>
+            {project.snapshotsUrl.map((url) => (
+              <Image
+                className="rounded-xl border border-foreground/10"
+                alt=""
+                width={600}
+                height={500}
+                src={url}
+              />
+            ))}
+          </Slider>
         </div>
-      </div>
-    </FlexBox>
+        <div className="md:w-2/4 w-full px-3 flex flex-col gap-3 justify-center">
+          <h5 className="font-extrabold font-poppins text-foreground/85 tracking-wide text-center uppercase text-base">
+            {project.projectName}
+          </h5>
+          <p className="text-center font-poppins text-foreground/80">
+            {project.projectDescription}
+          </p>
+          <div className="flex flex-wrap gap-2 px-3">
+            {project.stacksUsed.map((stack) => (
+              <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">
+                {stack}
+              </p>
+            ))}
+          </div>
+        </div>
+      </FlexBox>
+    </InView>
   );
 };
 
