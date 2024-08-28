@@ -6,18 +6,31 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { InView } from "./InView";
 import type { ProjectType } from "@/interfaces/ProjectType";
+import CarouselDots from "./CarouselDots";
 
 type ProjectContainerProps = {
   project: ProjectType;
 };
-const settings = {
-  className: "center",
-  infinite: true,
-  centerPadding: "60px",
-  slidesToShow: 1,
-  speed: 500,
-};
+
 const ProjectsContainer = ({ project }: ProjectContainerProps) => {
+  const [currentActiveDots, setCurrentActiveDots] = React.useState<number>(0);
+
+  const CarouselRef = React.useRef<Slider | null>(null);
+  const settings = {
+    className: "center",
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 800,
+    autoplay: true,
+    autoplayspeed: 4000,
+    afterChange: (e: number) => setCurrentActiveDots(e),
+    arrows: false,
+  };
+
+  function carouselDotsClick(index: number) {
+    CarouselRef.current?.slickGoTo(index);
+  }
   return (
     <InView
       variants={{
@@ -39,10 +52,10 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
         flexDirection="mdRow"
       >
         <div className="md:w-3/6 w-full">
-          <Slider {...settings}>
+          <Slider ref={CarouselRef} {...settings}>
             {project.snapshotsUrl.map((url) => (
               <Image
-                className="rounded-xl border border-foreground/10"
+                className="rounded-lg border border-foreground/10"
                 alt=""
                 width={600}
                 height={500}
@@ -50,6 +63,12 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
               />
             ))}
           </Slider>
+          <CarouselDots
+            clickHandler={carouselDotsClick}
+            lists={project.snapshotsUrl}
+            active={currentActiveDots}
+            className="mt-2"
+          />
         </div>
         <div className="md:w-2/4 w-full px-3 flex flex-col gap-3 justify-center">
           <h5 className="font-extrabold font-poppins text-foreground/85 tracking-wide text-center uppercase text-base">
@@ -60,7 +79,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
           </p>
           <div className="flex flex-wrap gap-2 px-3">
             {project.stacksUsed.map((stack) => (
-              <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 rounded-lg font-medium">
+              <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 text-foreground/85 rounded-lg font-medium">
                 {stack}
               </p>
             ))}
