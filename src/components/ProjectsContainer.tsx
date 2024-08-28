@@ -55,7 +55,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
         <div className="md:w-3/6 w-full">
           <Slider ref={CarouselRef} {...settings}>
             {project.snapshotsUrl.map((url) => (
-              <div className="pr-2">
+              <div key={url} className="pr-2">
                 <Image
                   className="rounded-lg border border-foreground/10"
                   alt=""
@@ -92,7 +92,10 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
           </p>
           <div className="flex flex-wrap gap-2 px-3">
             {project.stacksUsed.map((stack) => (
-              <p className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 text-foreground/85 rounded-lg font-medium">
+              <p
+                key={stack}
+                className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 text-foreground/85 rounded-lg font-medium"
+              >
                 {stack}
               </p>
             ))}

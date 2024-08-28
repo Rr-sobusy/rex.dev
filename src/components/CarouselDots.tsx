@@ -18,6 +18,7 @@ const CarouselDots = ({
     <ul className={cn("flex flex-row gap-3", className)}>
       {lists.map((_, index) => (
         <li
+          key={index}
           onClick={() => clickHandler(index)}
           className={`w-6 h-[.25rem] rounded-xl cursor-pointer ${
             index === active ? "bg-primary" : "bg-foreground/10"
