@@ -24,6 +24,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 1,
+    slidesToScroll:1,
     speed: 1000,
     afterChange: (e: number) => setCurrentActiveDots(e),
     arrows: false,
