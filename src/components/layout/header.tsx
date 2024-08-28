@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { FlexBox } from "../Flexbox";
-import { Sun } from "lucide-react";
+import { LuSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
 import HeaderNav from "./header-nav";
 
@@ -50,7 +50,7 @@ const Header = ({ className }: HeaderProps) => {
             onClick={toggleThemeChange}
             className="px-2 py-2 hover:bg-backgroundAccent rounded-lg"
           >
-            <Sun size={20} />
+            <LuSun size={20} />
           </span>
         </FlexBox>
       </FlexBox>

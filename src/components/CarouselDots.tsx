@@ -19,7 +19,7 @@ const CarouselDots = ({
       {lists.map((_, index) => (
         <li
           onClick={() => clickHandler(index)}
-          className={`w-2 h-2 rounded-full cursor-pointer ${
+          className={`w-6 h-[.25rem] rounded-xl cursor-pointer ${
             index === active ? "bg-primary" : "bg-foreground/10"
           } `}
         ></li>

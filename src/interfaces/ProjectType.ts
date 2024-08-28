@@ -3,4 +3,5 @@ export type ProjectType = {
   projectDescription: string;
   snapshotsUrl: string[];
   stacksUsed: string[];
+  codeComp: { codeRepo: string; liveSite: string };
 };
