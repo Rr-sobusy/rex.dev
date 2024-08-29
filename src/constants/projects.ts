@@ -30,7 +30,6 @@ export const projects = [
       "my.pokedex is an application use to fetch basic infos of a certain pokemon. This practice-project will leverage the power of Tanstack-Query by performing data fetching strategy and implementing client-side caching. ",
     snapshotsUrl: [
       "/projects/my.pokedex/snapshot-min.png",
-      "/projects/my.pokedex/choose_gen-min.png",
       "/projects/my.pokedex/about-min.png",
       "/projects/my.pokedex/stats-min.png",
       "/projects/my.pokedex/evolution-min.png",
@@ -38,7 +37,7 @@ export const projects = [
     stacksUsed: ["Vite", "Reactjs", "Tailwindcss", "Zustand", "Tanstack-Query"],
     codeComp: {
       codeRepo: "https://github.com/Rr-sobusy/pokedex-v2",
-      liveSite: "kedex-v2-chi.vercel.app/",
+      liveSite: "https://pokedex-v2-chi.vercel.app/",
     },
   },
 ] as ProjectType[];

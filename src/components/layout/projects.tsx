@@ -18,7 +18,7 @@ const Projects = () => {
       <Separator />
       <div className="slider-container flex flex-col gap-8">
         {projects.map((project, index) => (
-          <ProjectsContainer key={index} project={project} />
+          <ProjectsContainer index={index} key={index} project={project} />
         ))}
       </div>
     </section>

@@ -13,9 +13,10 @@ import CarouselArrows from "./CarouselArrows";
 
 type ProjectContainerProps = {
   project: ProjectType;
+  index: number;
 };
 
-const ProjectsContainer = ({ project }: ProjectContainerProps) => {
+const ProjectsContainer = ({ project, index }: ProjectContainerProps) => {
   const [currentActiveDots, setCurrentActiveDots] = React.useState<number>(0);
 
   const CarouselRef = React.useRef<Slider | null>(null);
@@ -24,11 +25,13 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 1,
-    slidesToScroll:1,
+    slidesToScroll: 1,
     speed: 1000,
     afterChange: (e: number) => setCurrentActiveDots(e),
     arrows: false,
   };
+
+  const isIndexEven = index % 2 === 0;
 
   function carouselDotsClick(index: number) {
     CarouselRef.current?.slickGoTo(index);
@@ -50,7 +53,9 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
     >
       <FlexBox
         display="flex"
-        className="mt-11 max-w-4xl mx-auto gap-5 md:gap-3"
+        className={`mt-11 max-w-4xl mx-auto gap-5 md:gap-3 ${
+          isIndexEven && "md:flex-row-reverse"
+        }`}
         flexDirection="mdRow"
       >
         <div className="md:w-3/6 w-full">
@@ -95,7 +100,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
             {project.stacksUsed.map((stack) => (
               <p
                 key={stack}
-                className="font-poppins text-base px-3 py-2 bg-backgroundAccent/40 text-foreground/85 rounded-lg font-medium"
+                className="font-poppins text-base px-3 py-1 bg-backgroundAccent/40 text-foreground/85 rounded-lg font-medium"
               >
                 {stack}
               </p>
@@ -103,7 +108,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
           </div>
           <div className="flex gap-3 px-3 font-poppins font-medium text-sm">
             <a
-              className="px-3 py-2 border border-foreground/10 rounded-lg flex items-center gap-2 text-foreground/90"
+              className="px-3 py-2 hover:bg-foreground/10 border border-foreground/10 rounded-lg flex items-center gap-2 text-foreground/90"
               href={project.codeComp.codeRepo}
               target="_blank"
             >
@@ -113,7 +118,7 @@ const ProjectsContainer = ({ project }: ProjectContainerProps) => {
               Github repo
             </a>
             <a
-              className="px-3 py-2 border border-foreground/10 rounded-lg flex items-center gap-2 text-foreground/90"
+              className="px-3 py-2 hover:bg-foreground/10 border border-foreground/10 rounded-lg flex items-center gap-2 text-foreground/90"
               href={project.codeComp.liveSite}
               target="_blank"
             >
