@@ -42,7 +42,7 @@ const Hero = ({ ...props }: HeroProps) => {
             ]}
             className={cn(
               "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-              "inset-x-0 inset-y-[-30%] h-[185%] md:h-[170%] skew-y-12"
+              "inset-x-0 inset-y-[-30%] h-[185%] md:h-[190%] skew-y-12"
             )}
           />
           <FlexBox
@@ -53,7 +53,7 @@ const Hero = ({ ...props }: HeroProps) => {
             <h5 className="font-poppins text-base text-foreground/85">
               Hi there &#128075;, I&apos;m
             </h5>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-poppins tracking-tight text-foreground/85">
+            <h1 className="text-3xl md:text-4xl font-extrabold font-poppins tracking-tight text-foreground/85">
               Rex Randy, an{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-tr z-10 from-primaryAccent to-primary relative after:absolute after:left-0 after:bottom-[8px] after:z-0 after:rounded-sm after:bg-gradient-to-r after:from-primaryAccent after:to-primary after:h-[4px] after:w-full">
                 aspiring&nbsp;
