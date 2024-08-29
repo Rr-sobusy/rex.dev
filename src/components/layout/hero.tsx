@@ -4,6 +4,8 @@ import Image from "next/image";
 import Button from "../Button";
 import { TextEffect } from "../TextEffect";
 import { InView } from "../InView";
+import GridPattern from "../GridPattern";
+import { cn } from "@/lib/utils";
 
 type HeroProps = {};
 
@@ -25,6 +27,24 @@ const Hero = ({ ...props }: HeroProps) => {
         viewOptions={{ margin: "0px 0px -350px 0px" }}
       >
         <FlexBox className="md:mt-14  flex flex-col lg:flex-row gap-12 lg:gap-0 min-h-[calc(100vh-52px)] pt-[4rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
+          <GridPattern
+            squares={[
+              [4, 4],
+              [5, 1],
+              [8, 2],
+              [5, 3],
+              [5, 5],
+              [10, 10],
+              [12, 15],
+              [15, 10],
+              [10, 15],
+              [15, 10],
+            ]}
+            className={cn(
+              "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+              "inset-x-0 inset-y-[-30%] h-[185%] md:h-[170%] skew-y-12"
+            )}
+          />
           <FlexBox
             className="flex-1 sm:mt-5 gap-2"
             justifyContent="center"
