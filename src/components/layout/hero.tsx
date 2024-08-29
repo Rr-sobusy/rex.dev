@@ -21,10 +21,10 @@ const Hero = ({ ...props }: HeroProps) => {
             y: 0,
           },
         }}
-        transition={{ duration: 0.9, ease: "easeInOut" }}
+        transition={{ duration: 0.9, ease: "easeInOut", once: true }}
         viewOptions={{ margin: "0px 0px -350px 0px" }}
       >
-        <FlexBox className="md:mt-14 flex flex-col lg:flex-row gap-12 lg:gap-0 min-h-[calc(100vh-52px)] pt-[4rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
+        <FlexBox className="md:mt-14  flex flex-col lg:flex-row gap-12 lg:gap-0 min-h-[calc(100vh-52px)] pt-[4rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
           <FlexBox
             className="flex-1 sm:mt-5 gap-2"
             justifyContent="center"
@@ -42,7 +42,7 @@ const Hero = ({ ...props }: HeroProps) => {
             </h1>
             <TextEffect
               className="font-poppins text-foreground/70 mt-1"
-              per="char"
+              per="word"
               preset="fade"
             >
               My hobby is to bring up the concepts and edges of technology to

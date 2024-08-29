@@ -16,7 +16,7 @@ const Projects = () => {
         every project that i have built.
       </h5>
       <Separator />
-      <div className="slider-container flex flex-col gap-8">
+      <div className="slider-container flex flex-col gap-11">
         {projects.map((project, index) => (
           <ProjectsContainer index={index} key={index} project={project} />
         ))}

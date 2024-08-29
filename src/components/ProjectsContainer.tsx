@@ -54,7 +54,7 @@ const ProjectsContainer = ({ project, index }: ProjectContainerProps) => {
       <FlexBox
         display="flex"
         className={`mt-11 max-w-4xl mx-auto gap-5 md:gap-3 ${
-          isIndexEven && "md:flex-row-reverse"
+          !isIndexEven && "md:flex-row-reverse"
         }`}
         flexDirection="mdRow"
       >
