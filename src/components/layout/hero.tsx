@@ -6,6 +6,8 @@ import { TextEffect } from "../TextEffect";
 import { InView } from "../InView";
 import GridPattern from "../GridPattern";
 import { cn } from "@/lib/utils";
+import { PiReadCvLogoLight } from "react-icons/pi";
+import { LiaGithub } from "react-icons/lia";
 
 type HeroProps = {};
 
@@ -71,8 +73,18 @@ const Hero = ({ ...props }: HeroProps) => {
               UI/UX design systems.
             </TextEffect>
             <FlexBox className="mt-3 gap-3">
-              <Button variant="contained">Download C.V</Button>
-              <Button variant="outlined">Github Profile</Button>
+              <Button className="flex gap-2 items-center" variant="contained">
+                <span>
+                  <PiReadCvLogoLight size={22} />
+                </span>
+                Download C.V
+              </Button>
+              <Button className="flex gap-2 items-center" variant="outlined">
+                <span>
+                  <LiaGithub size={22} />
+                </span>
+                Github Profile
+              </Button>
             </FlexBox>
           </FlexBox>
           <FlexBox className="flex-1 sm:w-3/4 mx-auto md:w-2/3">

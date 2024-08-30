@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Poppins } from "next/font/google";
@@ -22,6 +22,10 @@ const fontPoppins = Poppins({
 });
 
 const RootLayout = ({ children }: RootLayoutProps) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={`${fontPoppins.variable} min-w-screen px-3 lg:px-3`}>
       <Header />

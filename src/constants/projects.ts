@@ -44,12 +44,15 @@ export const projects = [
     projectName: "To-do App",
     projectDescription:
       "To-do app is an application inspired by a platform named Frontend Mentor. Built using Web API's localStorage as persistent-state storage coupled with React's Context API for handling global states, business logic and state mutations. And also has a feature for drag and dropping a list in a particular order.",
-    snapshotsUrl: [
-      "/projects/todo/1-min.png",
-      "/projects/todo/3-min.png",
-
+    snapshotsUrl: ["/projects/todo/1-min.png", "/projects/todo/3-min.png"],
+    stacksUsed: [
+      "Reactjs",
+      "Vite",
+      "Tailwindcss",
+      "Hooks",
+      "Context-API",
+      "Framer-motion",
     ],
-    stacksUsed: ["Reactjs", "Vite", "Tailwindcss","Hooks", "Context-API","Framer-motion"],
     codeComp: {
       codeRepo: "https://github.com/Rr-sobusy/todo-frontend-mentor",
       liveSite: "https://something-nonsense.netlify.app/",
@@ -58,19 +61,17 @@ export const projects = [
   {
     projectName: "Coursespace landing page",
     projectDescription:
-      "To-do app is an application inspired by a platform named Frontend Mentor. Built using Web API's localStorage as persistent-state storage coupled with React's Context API for handling global states, business logic and state mutations. And also has a feature for drag and dropping a list in a particular order.",
+      "Coursespace is a landing page that inspired in a repo that i have found in github. Created most of the layout and responsive containers using Flexbox.",
     snapshotsUrl: [
       "/projects/coursespace/1-min.png",
       "/projects/coursespace/2-min.png",
-      "/projects/coursespace/3-min.png",
       "/projects/coursespace/4-min.png",
       "/projects/coursespace/5-min.png",
-
     ],
-    stacksUsed: ["Reactjs", "Vite", "Tailwindcss","Hooks", "Context-API","Framer-motion"],
+    stacksUsed: ["Nextjs", "Tailwindcss", "React-Slick"],
     codeComp: {
-      codeRepo: "https://github.com/Rr-sobusy/todo-frontend-mentor",
-      liveSite: "https://something-nonsense.netlify.app/",
+      codeRepo: "https://github.com/Rr-sobusy/course-space-remake-landing-page",
+      liveSite: "https://coursepace-landing.netlify.app/",
     },
   },
 ] as ProjectType[];
