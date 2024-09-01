@@ -10,10 +10,10 @@ type CarouselArrowsProps = {
 const CarouselArrows = ({ handlePrev, handleNext }: CarouselArrowsProps) => {
   return (
     <ul className="flex gap-3">
-      <li onClick={handlePrev} className="w-9 h-9 border border-foreground/15 text-foreground/90 hover:bg-primary hover:text-background  rounded-full flex items-center justify-center cursor-pointer">
+      <li onClick={handlePrev} className="w-9 h-9 border border-foreground/15 text-foreground/90 hover:bg-primary hover:text-background hover:border-none  rounded-full flex items-center justify-center cursor-pointer">
         <GoArrowLeft size={18} />
       </li>
-      <li onClick={handleNext} className="w-9 h-9 border border-foreground/15 text-foreground/90 hover:bg-primary hover:text-background  rounded-full flex items-center justify-center cursor-pointer">
+      <li onClick={handleNext} className="w-9 h-9 border border-foreground/15 text-foreground/90 hover:bg-primary hover:text-background hover:border-none  rounded-full flex items-center justify-center cursor-pointer">
         <GoArrowRight size={18} />
       </li>
     </ul>
