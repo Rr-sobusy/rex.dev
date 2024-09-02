@@ -7,18 +7,26 @@ type NavLinkProps = {
   children: string | React.ReactNode;
   offset?: number;
   className?: string;
+  clickHandler?: () => void;
 };
 
-const HeaderNav = ({ to, children, offset, className }: NavLinkProps) => {
+const HeaderNav = ({
+  to,
+  children,
+  offset,
+  className,
+  clickHandler,
+}: NavLinkProps) => {
   return (
     <Link
+      onClick={clickHandler}
       to={to}
       spy={true}
       smooth={true}
       offset={offset}
       duration={1000}
       className={cn(
-        "relative after:absolute after:content-[''] after:-bottom-1 after:left-0 after:rounded-xl after:bg-primary after:h-[3px] after:w-0 after:duration-300 after:hover:w-full",
+        "text-foreground/85 cursor-pointer",
         className
       )}
     >

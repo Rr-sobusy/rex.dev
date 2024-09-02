@@ -4,12 +4,16 @@ import { FlexBox } from "../Flexbox";
 import { LuSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
 import HeaderNav from "./header-nav";
+import { TbMenu2 } from "react-icons/tb";
+import { Spiral as Hamburger } from "hamburger-react";
 
 type HeaderProps = {
   className?: string;
+  isSideNavShown: boolean;
+  sideNavToggler: () => void;
 };
 
-const Header = ({ className }: HeaderProps) => {
+const Header = ({ className, sideNavToggler, isSideNavShown }: HeaderProps) => {
   const { theme, setTheme } = useTheme();
 
   const toggleThemeChange = () => {
@@ -18,7 +22,7 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <header
       className={cn(
-        "py-3 h-[55px] fixed max-w-6xl top-0 w-full translate-x-[-50%] left-1/2 bg-background px-3 lg:px-0 mx-auto z-50",
+        "py-3 h-[55px] fixed max-w-6xl top-0 w-full translate-x-[-50%] left-1/2 bg-background px-3 lg:px-0 mx-auto z-40",
         className
       )}
     >
@@ -36,7 +40,7 @@ const Header = ({ className }: HeaderProps) => {
               <HeaderNav
                 key={content}
                 offset={-70}
-                className="font-poppins text-foreground/85 cursor-pointer"
+                className="relative after:absolute after:content-[''] after:-bottom-1 after:left-0 after:rounded-xl after:bg-primary after:h-[3px] after:w-0 after:duration-300 after:hover:w-full font-poppins"
                 to={content}
               >
                 {content}
@@ -46,11 +50,19 @@ const Header = ({ className }: HeaderProps) => {
               Dm me
             </button>
           </FlexBox>
+
           <span
             onClick={toggleThemeChange}
             className="px-2 py-2 hover:bg-backgroundAccent rounded-lg"
           >
             <LuSun size={20} />
+          </span>
+          <span className="block md:hidden">
+            <Hamburger
+              toggled={isSideNavShown}
+              onToggle={sideNavToggler}
+              size={24}
+            />
           </span>
         </FlexBox>
       </FlexBox>
