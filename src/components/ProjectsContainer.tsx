@@ -21,7 +21,7 @@ const ProjectsContainer = ({ project, index }: ProjectContainerProps) => {
 
   const CarouselRef = React.useRef<Slider | null>(null);
   const settings = {
-    className: "flex",
+    className: "",
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 1,
@@ -58,7 +58,7 @@ const ProjectsContainer = ({ project, index }: ProjectContainerProps) => {
         }`}
         flexDirection="mdRow"
       >
-        <div className="md:w-3/6 w-full">
+        <div className="md:w-3/6 w-full relative flex flex-col justify-center">
           <Slider ref={CarouselRef} {...settings}>
             {project.snapshotsUrl.map((url) => (
               <div key={url} className="pr-2">
