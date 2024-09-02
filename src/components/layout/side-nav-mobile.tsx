@@ -19,7 +19,7 @@ const SideNavMobile = ({ isSideNavShown, clickHandler }: SideNavProps) => {
           clickHandler={clickHandler}
           key={content}
           offset={-70}
-          className="font-medium underline"
+          className="font-semibold tracking-tight underline"
           to={content}
         >
           {content}

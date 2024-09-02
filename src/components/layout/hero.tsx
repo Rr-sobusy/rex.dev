@@ -89,7 +89,7 @@ const Hero = ({ ...props }: HeroProps) => {
           </FlexBox>
           <FlexBox className="flex-1 sm:w-3/4 mx-auto md:w-2/3">
             <Image
-              className="w-[330px] h-[250px] sm:w-[450px] sm:h-[320px] lg:w-auto lg:h-auto"
+              className="w-[350px] h-[240px] sm:w-[450px] sm:h-[320px] lg:w-auto lg:h-auto"
               width={800}
               height={600}
               alt="heroimage"
