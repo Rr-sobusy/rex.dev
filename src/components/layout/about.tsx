@@ -6,12 +6,12 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section id="About me" className="mt-8 min-h-screen">
-      <h5 className="font-poppins sm:text-lg font-extrabold tracking-wide text-foreground/85">
-        About me
-      </h5>
+    <section id="About" className="mt-8 min-h-screen">
+        <h1 className="font-poppins text-xl font-extrabold tracking-wide text-foreground/85 w-full">
+        {"<AboutMe />"}
+      </h1>
       <Separator />
-      <FlexBox className="w-1/2 border">rex</FlexBox>
+      <FlexBox className="w-1/2 border mt-4">rex</FlexBox>
     </section>
   );
 };
