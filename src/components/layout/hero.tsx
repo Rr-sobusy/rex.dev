@@ -93,6 +93,7 @@ const Hero = ({ ...props }: HeroProps) => {
               className="w-[350px] h-[240px] sm:w-[450px] sm:h-[320px] lg:w-auto lg:h-auto"
               width={800}
               height={600}
+              priority
               placeholder="blur"
               alt="heroimage"
               src={HeroImage}
