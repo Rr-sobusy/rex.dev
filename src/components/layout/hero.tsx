@@ -8,6 +8,7 @@ import GridPattern from "../GridPattern";
 import { cn } from "@/lib/utils";
 import { PiReadCvLogoLight } from "react-icons/pi";
 import { LiaGithub } from "react-icons/lia";
+import HeroImage from "@/../public/main-hero.png";
 
 type HeroProps = {};
 
@@ -92,8 +93,9 @@ const Hero = ({ ...props }: HeroProps) => {
               className="w-[350px] h-[240px] sm:w-[450px] sm:h-[320px] lg:w-auto lg:h-auto"
               width={800}
               height={600}
+              placeholder="blur"
               alt="heroimage"
-              src="/main-hero.png"
+              src={HeroImage}
             />
           </FlexBox>
         </FlexBox>
