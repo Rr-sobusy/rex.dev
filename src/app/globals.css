@@ -9,6 +9,7 @@
     --accent-hsl: 0 0 93;
     /* --primary: 140 49 53; */
     --primary: 149 49 53;
+    --primary-accent:184 54 52;
   }
 
   .dark {
@@ -16,6 +17,7 @@
      --foreground-hsl: 0 0 100;
      --accent-hsl: 0 0 19;
      --primary: 140 49 53;
+     --primary-accent:184 54 52;
    }
    }
   

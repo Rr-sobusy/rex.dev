@@ -74,12 +74,15 @@ const Hero = ({ ...props }: HeroProps) => {
               UI/UX design systems.
             </TextEffect>
             <FlexBox className="mt-3 gap-3">
-              <Button className="flex gap-2 items-center" variant="contained">
-                <span>
+              <a
+                href="https://drive.google.com/file/d/1bS6z-oakl-IT5loL3yvTWelSd6dXIffD/view?usp=drive_link"
+                target="_blank"
+              >
+                <Button className="flex gap-2 items-center" variant="contained">
                   <PiReadCvLogoLight size={22} />
-                </span>
-                Download C.V
-              </Button>
+                  Download C.V
+                </Button>
+              </a>
               <Button className="flex gap-2 items-center" variant="outlined">
                 <span>
                   <LiaGithub size={22} />
