@@ -9,6 +9,8 @@ import { BorderBeam } from "../BorderBeam";
 import { Marquee } from "../Marque";
 import { Logos } from "@/constants/Marque-Logos";
 import { cn } from "@/lib/utils";
+import MarqueCard from "../MarqueCard";
+import { techStacks } from "@/constants/stacks";
 
 type Props = {};
 const reviews = [
@@ -83,7 +85,7 @@ function ReviewCard({
     </figure>
   );
 }
-const firstRow = reviews.slice(0, reviews.length / 2);
+const firstRow = techStacks.slice(0, reviews.length / 2);
 const About = (props: Props) => {
   const arr = [Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.aws];
   return (
@@ -97,9 +99,9 @@ const About = (props: Props) => {
         flexDirection="mdRow"
         className="max-w-4xl mx-3 md:mx-auto py-14 gap-4 md:gap-[4rem]"
       >
-        <FlexBox className="max-w-[320px] mx-auto flex justify-center mt-4 relative rounded-full">
+        <FlexBox className="max-w-[170px] md:max-w-[320px] mx-auto flex justify-center mt-4 relative rounded-full">
           <Image
-            className="bg-foreground/5 rounded-full w-full"
+            className="bg-foreground/5 rounded-full"
             placeholder="blur"
             priority
             src={MyImage}
@@ -126,11 +128,11 @@ const About = (props: Props) => {
         </FlexBox>
       </FlexBox>
       <div>
-        {/* <Marquee pauseOnHover className="[--duration:15s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+        <Marquee pauseOnHover className="[--duration:10s]">
+          {firstRow.map((stack) => (
+          <MarqueCard stack={stack} />
           ))}
-        </Marquee> */}
+        </Marquee>
       </div>
     </section>
   );
