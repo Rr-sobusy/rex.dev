@@ -129,8 +129,8 @@ const About = (props: Props) => {
       </FlexBox>
       <div>
         <Marquee pauseOnHover className="[--duration:10s]">
-          {firstRow.map((stack) => (
-          <MarqueCard stack={stack} />
+          {firstRow.map((stack, index) => (
+            <MarqueCard key={index} stack={stack} />
           ))}
         </Marquee>
       </div>
