@@ -39,7 +39,7 @@ const reviews = [
   {
     name: "Jenny",
     username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: `Im at a loss for words. This is amazing. I love it.`,
     img: "https://avatar.vercel.sh/jenny",
   },
   {
@@ -95,7 +95,7 @@ const About = (props: Props) => {
       <FlexBox
         alignItems="center"
         flexDirection="mdRow"
-        className="max-w-4xl mx-auto py-14 gap-4 md:gap-[4rem]"
+        className="max-w-4xl mx-3 md:mx-auto py-14 gap-4 md:gap-[4rem]"
       >
         <FlexBox className="max-w-[320px] mx-auto flex justify-center mt-4 relative rounded-full">
           <Image
@@ -114,10 +114,10 @@ const About = (props: Props) => {
             Who am i?
           </p>
           <p className="font-poppins text-foreground/85 mt-3">
-            Hi my name is Rex Randy Hernandez. An aspiring{" "}
-            <strong>fullstack developer.</strong> I'm driven by a desire to
+            Hi my name is Rex Randy Hernandez. An aspiring&nbsp;
+            <strong>fullstack developer.</strong> I&apos;m driven by a desire to
             create <strong>innovative solutions</strong> that make a positive
-            impact especially to businesses. I'm a collaborative{" "}
+            impact especially to businesses. I&apos;m a collaborative&nbsp;
             <strong>team player</strong> who thrives on solving complex problems
             and continuously learning new technologies. My goal is to contribute
             my expertise to a dynamic team and help them to build exceptional
@@ -126,11 +126,11 @@ const About = (props: Props) => {
         </FlexBox>
       </FlexBox>
       <div>
-        <Marquee pauseOnHover className="[--duration:15s]">
+        {/* <Marquee pauseOnHover className="[--duration:15s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
-        </Marquee>
+        </Marquee> */}
       </div>
     </section>
   );

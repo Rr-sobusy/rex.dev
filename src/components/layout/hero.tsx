@@ -26,8 +26,8 @@ const Hero = ({ ...props }: HeroProps) => {
             y: 0,
           },
         }}
-        transition={{ duration: 0.9, ease: "easeInOut", once: true }}
-        viewOptions={{ margin: "0px 0px -350px 0px" }}
+        transition={{ duration: 0.9, ease: "easeInOut" }}
+        viewOptions={{ margin: "0px 0px -350px 0px", once: true }}
       >
         <FlexBox className="md:mt-14  flex flex-col lg:flex-row gap-12 lg:gap-0 min-h-[calc(100vh-52px)] pt-[4rem] md:pt-[2rem] lg:pt-[8rem] w-full relative">
           <GridPattern
