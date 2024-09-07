@@ -10,7 +10,7 @@ const MarqueCard = ({ stack, ...props }: MarqueCardProps) => {
   return (
     <div {...props} className="flex gap-3 min-w-64 min-h-[150px] items-center">
       <Image
-        className="text-primary"
+        className="text-primary __edit"
         height={100}
         width={100}
         alt="MarqueImage"

@@ -7,87 +7,13 @@ import Image from "next/image";
 import MyImage from "@/../public/rex_image.png";
 import { BorderBeam } from "../BorderBeam";
 import { Marquee } from "../Marque";
-import { Logos } from "@/constants/Marque-Logos";
+import { MarqueLogos } from "@/constants/Marque-Logos";
+import GridPattern from "../GridPattern";
 import { cn } from "@/lib/utils";
-import MarqueCard from "../MarqueCard";
-import { techStacks } from "@/constants/stacks";
-
 type Props = {};
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: `Im at a loss for words. This is amazing. I love it.`,
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-function ReviewCard({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) {
-  return (
-    <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-}
-const firstRow = techStacks.slice(0, reviews.length / 2);
+
 const About = (props: Props) => {
-  const arr = [Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.aws];
+  const Stacks = Object.entries(MarqueLogos).map(([_, ctx]) => ctx);
   return (
     <section id="About" className="mt-8 min-h-screen">
       <h1 className="font-poppins text-xl font-extrabold tracking-wide text-foreground/85 w-full transition-[ease] duration-[1]">
@@ -97,7 +23,7 @@ const About = (props: Props) => {
       <FlexBox
         alignItems="center"
         flexDirection="mdRow"
-        className="max-w-4xl mx-3 md:mx-auto py-14 gap-4 md:gap-[4rem]"
+        className="max-w-4xl mx-3 md:mx-auto py-14 gap-4 md:gap-[4rem] relative"
       >
         <FlexBox className="max-w-[170px] md:max-w-[320px] mx-auto flex justify-center mt-4 relative rounded-full">
           <Image
@@ -109,7 +35,7 @@ const About = (props: Props) => {
             width={320}
             alt="myimage"
           />
-          <BorderBeam borderWidth={2} size={170} duration={12} delay={9} />
+          <BorderBeam borderWidth={2} size={70} duration={12} delay={9} />
         </FlexBox>
         <FlexBox flexDirection="col" className="md:w-full">
           <p className="font-poppins text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primaryAccent text-bold tracking-widest">
@@ -126,11 +52,29 @@ const About = (props: Props) => {
             products.
           </p>
         </FlexBox>
+        <GridPattern
+          squares={[
+            [4, 4],
+            [5, 1],
+            [8, 2],
+            [5, 3],
+            [5, 5],
+            [10, 10],
+            [12, 15],
+            [15, 10],
+            [10, 15],
+            [15, 10],
+          ]}
+          className={cn(
+            "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[185%] md:h-[190%] skew-y-12 fill-none"
+          )}
+        />
       </FlexBox>
       <div>
-        <Marquee pauseOnHover className="[--duration:10s]">
-          {firstRow.map((stack, index) => (
-            <MarqueCard key={index} stack={stack} />
+        <Marquee pauseOnHover className="[--duration:17s]">
+          {Stacks.map((Content, index) => (
+            <Content key={index} />
           ))}
         </Marquee>
       </div>
