@@ -1,9 +1,11 @@
 import RootLayout from "@/components/layout/root-layout";
 import About from "@/components/layout/about";
+import Footer from "@/components/layout/footer";
 import dynamic from "next/dynamic";
 
 const DynamicHero = dynamic(() => import("@/components/layout/hero"));
 const DynamicProjects = dynamic(() => import("@/components/layout/projects"));
+
 
 export default function Home() {
   return (
@@ -12,6 +14,7 @@ export default function Home() {
       <DynamicHero />
       <DynamicProjects />
       <About />
+      <Footer />
     </RootLayout>
   );
 }

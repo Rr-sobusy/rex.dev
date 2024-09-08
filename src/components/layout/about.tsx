@@ -12,6 +12,9 @@ import GridPattern from "../GridPattern";
 import { cn } from "@/lib/utils";
 import FormInputField from "../FormInputField";
 import Button from "../Button";
+import { CiLinkedin } from "react-icons/ci";
+import { AiFillGithub } from "react-icons/ai";
+import { BiLogoFacebookCircle } from "react-icons/bi";
 type Props = {};
 
 const About = (props: Props) => {
@@ -25,7 +28,7 @@ const About = (props: Props) => {
       <FlexBox
         alignItems="center"
         flexDirection="mdRow"
-        className="max-w-4xl mx-3 md:mx-auto py-14 gap-4 md:gap-[4rem] relative"
+        className="max-w-4xl mx-5 md:mx-auto py-14 gap-4 md:gap-[4rem] relative"
       >
         <FlexBox className="max-w-[170px] md:max-w-[320px] mx-auto flex justify-center mt-4 relative rounded-full">
           <Image
@@ -81,7 +84,10 @@ const About = (props: Props) => {
           ))}
         </Marquee>
       </div>
-      <FlexBox flexDirection="mdRow" className="mt-[5rem] gap-12">
+      <FlexBox
+        flexDirection="mdRow"
+        className="mt-[5rem] gap-5 md:gap-12 mx-5 md:mx-0"
+      >
         <FlexBox flexDirection="col" className="flex-1 gap-1">
           <h2 className="font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary to-primaryAccent text-2xl font-extrabold tracking-tight">
             Get in touch with me.
@@ -91,8 +97,19 @@ const About = (props: Props) => {
             digital product developer. Let&apos;s talk about your hits with me
             whether is it full-time or freelance works.
           </h5>
+          <FlexBox className="gap-3">
+            <a className="px-2 py-2 rounded-md hover:bg-foreground/5">
+              <CiLinkedin size={38} />
+            </a>
+            <a className="px-2 py-2 rounded-md hover:bg-foreground/5">
+              <AiFillGithub size={35} />
+            </a>
+            <a className="px-2 py-2 rounded-md hover:bg-foreground/5">
+              <BiLogoFacebookCircle size={35} />
+            </a>
+          </FlexBox>
         </FlexBox>
-        <FlexBox flexDirection="col" className="flex-1 gap-5 pb-5">
+        <FlexBox flexDirection="col" className="flex-1 gap-5">
           <div className="flex flex-col w-full">
             <label className="font-poppins text-sm font-semibold tracking-tight text-foreground/85 ml-2">
               Email address
@@ -132,6 +149,7 @@ const About = (props: Props) => {
           </Button>
         </FlexBox>
       </FlexBox>
+      <Separator className="mt-8" />
     </section>
   );
 };
