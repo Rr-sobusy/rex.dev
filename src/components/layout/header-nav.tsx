@@ -26,7 +26,7 @@ const HeaderNav = ({
       offset={offset}
       duration={1000}
       className={cn(
-        "text-foreground/85 cursor-pointer font-poppins",
+        "text-foreground/90 cursor-pointer font-poppins",
         className
       )}
     >

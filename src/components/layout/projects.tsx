@@ -2,6 +2,7 @@ import React from "react";
 import Separator from "../Separator";
 import ProjectsContainer from "../ProjectsContainer";
 import { projects } from "@/constants/projects";
+import { FlexBox } from "../Flexbox";
 
 const Projects = () => {
   return (

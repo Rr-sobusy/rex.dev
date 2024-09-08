@@ -19,13 +19,13 @@ const SideNavMobile = ({ isSideNavShown, clickHandler }: SideNavProps) => {
           clickHandler={clickHandler}
           key={content}
           offset={-70}
-          className="font-semibold tracking-tight underline"
+          className="font-semibold tracking-tight underline text-foreground/90"
           to={content}
         >
           {content}
         </HeaderNav>
       ))}
-      <Button className="w-48 place-self-center rounded-2xl" variant="contained">Dm me</Button>
+      <Button className="w-48 place-self-center rounded-2xl py-2" variant="contained">Dm me</Button>
     </section>
   );
 };

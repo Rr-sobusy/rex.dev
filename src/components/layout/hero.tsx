@@ -53,10 +53,10 @@ const Hero = ({ ...props }: HeroProps) => {
             justifyContent="center"
             flexDirection="col"
           >
-            <h5 className="font-poppins text-base text-foreground/85">
+            <h5 className="font-poppins text-base text-foreground/90">
               Hi there &#128075;, I&apos;m
             </h5>
-            <h1 className="text-3xl md:text-4xl font-extrabold font-poppins tracking-tight text-foreground/85">
+            <h1 className="text-3xl md:text-4xl font-extrabold font-poppins tracking-tight text-foreground/90">
               Rex Randy, an{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-tr z-10 from-primaryAccent to-primary relative after:absolute after:left-0 after:bottom-[8px] after:z-0 after:rounded-sm after:bg-gradient-to-r after:from-primaryAccent after:to-primary after:h-[4px] after:w-full">
                 aspiring&nbsp;
@@ -64,7 +64,7 @@ const Hero = ({ ...props }: HeroProps) => {
               Fullstack Developer.
             </h1>
             <TextEffect
-              className="font-poppins text-foreground/70 mt-1"
+              className="font-poppins text-foreground/75 mt-1"
               per="word"
               preset="fade"
             >

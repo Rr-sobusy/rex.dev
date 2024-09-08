@@ -10,6 +10,8 @@ import { Marquee } from "../Marque";
 import { MarqueLogos } from "@/constants/Marque-Logos";
 import GridPattern from "../GridPattern";
 import { cn } from "@/lib/utils";
+import FormInputField from "../FormInputField";
+import Button from "../Button";
 type Props = {};
 
 const About = (props: Props) => {
@@ -38,7 +40,7 @@ const About = (props: Props) => {
           <BorderBeam borderWidth={2} size={70} duration={12} delay={9} />
         </FlexBox>
         <FlexBox flexDirection="col" className="md:w-full">
-          <p className="font-poppins text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primaryAccent text-bold tracking-widest">
+          <p className="font-poppins text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primaryAccent font-medium tracking-widest">
             Who am i?
           </p>
           <p className="font-poppins text-foreground/85 mt-3">
@@ -47,7 +49,8 @@ const About = (props: Props) => {
             create <strong>innovative solutions</strong> that make a positive
             impact especially to businesses. I&apos;m a collaborative&nbsp;
             <strong>team player</strong> who thrives on solving complex problems
-            and continuously learning new technologies. My goal is to contribute
+            and continuously learning new technologies. My goal is to&nbsp;
+            <strong>contribute </strong>
             my expertise to a dynamic team and help them to build exceptional
             products.
           </p>
@@ -72,12 +75,63 @@ const About = (props: Props) => {
         />
       </FlexBox>
       <div>
-        <Marquee pauseOnHover className="[--duration:17s]">
+        <Marquee pauseOnHover className="[--duration:20s]">
           {Stacks.map((Content, index) => (
             <Content key={index} />
           ))}
         </Marquee>
       </div>
+      <FlexBox flexDirection="mdRow" className="mt-[5rem] gap-12">
+        <FlexBox flexDirection="col" className="flex-1 gap-1">
+          <h2 className="font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary to-primaryAccent text-2xl font-extrabold tracking-tight">
+            Get in touch with me.
+          </h2>
+          <h5 className="font-poppins text-foreground/85 md:w-3/4 ">
+            Im always looking for opportunity that nurture me as a better
+            digital product developer. Let&apos;s talk about your hits with me
+            whether is it full-time or freelance works.
+          </h5>
+        </FlexBox>
+        <FlexBox flexDirection="col" className="flex-1 gap-5 pb-5">
+          <div className="flex flex-col w-full">
+            <label className="font-poppins text-sm font-semibold tracking-tight text-foreground/85 ml-2">
+              Email address
+            </label>
+            <FormInputField
+              className=""
+              type="text"
+              placeholder="sample-email@provider.com"
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label className="font-poppins text-sm font-semibold tracking-tight text-foreground/85 ml-2">
+              Subject
+            </label>
+            <FormInputField
+              className=""
+              type="text"
+              placeholder="Project Collaboration"
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label className="font-poppins text-sm font-semibold tracking-tight text-foreground/85 ml-2">
+              Your message
+            </label>
+            <FormInputField
+              className="min-h-24"
+              as="textarea"
+              type="text"
+              placeholder="Hi Good day Mr...."
+            />
+          </div>
+          <Button
+            className="bg-gradient-to-r to-primary from-primaryAccent py-3"
+            variant="contained"
+          >
+            Send Message
+          </Button>
+        </FlexBox>
+      </FlexBox>
     </section>
   );
 };
