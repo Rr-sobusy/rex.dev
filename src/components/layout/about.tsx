@@ -27,8 +27,12 @@ const About = () => {
 
   const Stacks = Object.entries(MarqueLogos).map(([_, ctx]) => ctx);
 
-  const submitHandler = (data: contactFormType) => {
-    console.log(data);
+  const submitHandler = async (data: contactFormType) => {
+    const res = await fetch("/api/mailer", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    console.log(res);
   };
 
   return (
