@@ -21,7 +21,7 @@ import { contactFormType, ContactFormType } from "@/interfaces/ContactFormType";
 const About = () => {
   const {
     register,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     handleSubmit,
   } = useForm<contactFormType>({ resolver: zodResolver(ContactFormType) });
 
@@ -32,7 +32,9 @@ const About = () => {
       method: "POST",
       body: JSON.stringify(data),
     });
-    console.log(res);
+    if (res.ok) {
+      alert("Message successfully sent!");
+    }
   };
 
   return (
@@ -190,10 +192,16 @@ const About = () => {
               />
             </div>
             <Button
-              className="bg-gradient-to-r to-primary from-primaryAccent py-3"
+              type="submit"
+              className={`${
+                isSubmitting
+                  ? "bg-green-200"
+                  : "bg-gradient-to-r to-primary from-primaryAccent"
+              } bg py-3`}
               variant="contained"
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? "Sending message..." : "Send message"}
             </Button>
           </form>
         </FlexBox>

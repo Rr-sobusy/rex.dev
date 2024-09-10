@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import type { contactFormType } from "@/interfaces/ContactFormType";
 
 const createTransporter = () => {
-  // Validate environment variables
   if (!process.env.USER_EMAIL || !process.env.USER_PASS) {
     throw new Error("Missing email credentials");
   }
@@ -17,7 +16,10 @@ const createTransporter = () => {
   });
 };
 
-const sendEmail = async (transporter: mailer.Transporter, mailOptions: mailer.SendMailOptions) => {
+const sendEmail = async (
+  transporter: mailer.Transporter,
+  mailOptions: mailer.SendMailOptions
+) => {
   return new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
@@ -36,18 +38,23 @@ export async function POST(request: NextRequest) {
     const transporter = createTransporter();
 
     const mailOptions = {
-      from: body.email,
+      from: "From:" + " " + body.email,
       to: process.env.TARGET_EMAIL,
       subject: body.subject,
       text: body.message,
     };
 
-    // Send email
-    const info = await sendEmail(transporter, mailOptions);
+    const mailResponse = await sendEmail(transporter, mailOptions);
 
-    return NextResponse.json({ message: "Email sent successfully", info });
+    return NextResponse.json({
+      message: "Email sent successfully",
+      mailResponse,
+    });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }
