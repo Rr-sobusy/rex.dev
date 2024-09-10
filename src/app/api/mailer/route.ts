@@ -38,10 +38,12 @@ export async function POST(request: NextRequest) {
     const transporter = createTransporter();
 
     const mailOptions = {
-      from: "From:" + " " + body.email,
+      from: "", 
       to: process.env.TARGET_EMAIL,
       subject: body.subject,
-      text: body.message,
+      html: `<b>From: ${body.email}</b></br></br>
+      <p>${body.message}</p>
+      `,
     };
 
     const mailResponse = await sendEmail(transporter, mailOptions);

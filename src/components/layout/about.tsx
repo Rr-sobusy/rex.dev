@@ -25,7 +25,7 @@ const About = () => {
     handleSubmit,
   } = useForm<contactFormType>({ resolver: zodResolver(ContactFormType) });
 
-  const Stacks = Object.entries(MarqueLogos).map(([_, ctx]) => ctx);
+  const Stacks = Object.entries(MarqueLogos).map(([index, ctx]) => ctx );
 
   const submitHandler = async (data: contactFormType) => {
     const res = await fetch("/api/mailer", {
