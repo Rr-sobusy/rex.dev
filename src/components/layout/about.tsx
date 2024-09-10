@@ -133,10 +133,11 @@ const About = () => {
               whether is it full-time or freelance works.
             </h5>
             <FlexBox className="gap-3">
-              {Socials.map((social) => {
+              {Socials.map((social, index) => {
                 const Icon = social.icon;
                 return (
                   <a
+                    key={index}
                     target="_blank"
                     href={social.link}
                     className="px-2 py-2 rounded-md hover:bg-foreground/5"

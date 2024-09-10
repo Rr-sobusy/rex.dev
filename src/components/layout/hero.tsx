@@ -83,12 +83,19 @@ const Hero = ({ ...props }: HeroProps) => {
                   Download C.V
                 </Button>
               </a>
-              <Button className="flex gap-2 items-center" variant="outlined">
-                <span>
-                  <LiaGithub size={22} />
-                </span>
-                Github Profile
-              </Button>
+              <a
+                href="
+                https://github.com/Rr-sobusy
+              "
+                target="_blank"
+              >
+                <Button className="flex gap-2 items-center" variant="outlined">
+                  <span>
+                    <LiaGithub size={22} />
+                  </span>
+                  Github Profile
+                </Button>
+              </a>
             </FlexBox>
           </FlexBox>
           <FlexBox className="flex-1 sm:w-3/4 mx-auto md:w-2/3">
