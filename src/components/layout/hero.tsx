@@ -69,7 +69,7 @@ const Hero = ({ ...props }: HeroProps) => {
               preset="fade"
             >
               My hobby is to bring up the concepts and edges of technology to
-              build a something significant.I have a strong passion for creating
+              build something significant. I have a strong passion for creating
               a neat and readable sets of code while following the principles of
               UI/UX design systems.
             </TextEffect>

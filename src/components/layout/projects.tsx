@@ -11,10 +11,10 @@ const Projects = () => {
         {"<Projects />"}
       </h1>
       <h5 className="font-poppins text-base text-foreground/75">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primaryAccent to-primary">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primaryAccent to-primary tracking-tight">
           Showcasing
         </span>{" "}
-        every project that i have built.
+        some of the project that I have built.
       </h5>
       <Separator />
       <div className="slider-container flex flex-col gap-11">
