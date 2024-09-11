@@ -27,7 +27,7 @@ export const projects = [
   {
     projectName: "my.pokedex",
     projectDescription:
-      "my.pokedex is an application use to fetch basic infos of a certain pokemon. This practice-project will leverage the power of Tanstack-Query by performing data fetching strategy and implementing client-side caching. ",
+      "my.pokedex is an application used to fetch basic infos of a certain pokemon. This practice-project will leverage the power of Tanstack-Query by performing data fetching strategy and implementing client-side caching. ",
     snapshotsUrl: [
       "/projects/my.pokedex/snapshot-min.png",
       "/projects/my.pokedex/about-min.png",
@@ -43,7 +43,7 @@ export const projects = [
   {
     projectName: "To-do App",
     projectDescription:
-      "To-do app is an application inspired by a platform named Frontend Mentor. Built using Web API's localStorage as persistent-state storage coupled with React's Context API for handling global states, business logic and state mutations. And also has a feature for drag and dropping a list in a particular order.",
+      "To-do app is an application inspired by a platform named Frontend Mentor. Built using Web API's localStorage as persistent-state storage coupled with React's Context API for handling global states, business logic and state mutations. And also has a feature for dragging and dropping a list in a particular order.",
     snapshotsUrl: ["/projects/todo/1-min.png", "/projects/todo/3-min.png"],
     stacksUsed: [
       "Reactjs",
@@ -61,7 +61,7 @@ export const projects = [
   {
     projectName: "Coursespace landing page",
     projectDescription:
-      "Coursespace is a landing page that inspired in a repo that i have found in github. Created most of the layout and responsive containers using Flexbox.",
+      "Coursespace is a landing page that inspired in a repo that I have found in github. Created most of the layout and responsive containers using Flexbox.",
     snapshotsUrl: [
       "/projects/coursespace/1-min.png",
       "/projects/coursespace/2-min.png",

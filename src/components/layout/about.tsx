@@ -80,7 +80,7 @@ const About = () => {
               Who am i?
             </p>
             <p className="font-poppins text-foreground/85 mt-3">
-              Hi my name is Rex Randy Hernandez. An aspiring&nbsp;
+              Hi my name is Rex Randy Hernandez, an aspiring&nbsp;
               <strong>fullstack developer.</strong> I&apos;m driven by a desire
               to create <strong>innovative solutions</strong> that make a
               positive impact especially to businesses. I&apos;m a
@@ -128,7 +128,7 @@ const About = () => {
               Get in touch with me.
             </h2>
             <h5 className="font-poppins text-foreground/85 md:w-3/4 ">
-              Im always looking for opportunity that nurture me as a better
+              I am always looking for opportunity that nurture me as a better
               digital product developer. Let&apos;s talk about your hits with me
               whether is it full-time or freelance works.
             </h5>
