@@ -25,7 +25,14 @@ const SideNavMobile = ({ isSideNavShown, clickHandler }: SideNavProps) => {
           {content}
         </HeaderNav>
       ))}
-      <Button className="w-48 place-self-center rounded-2xl py-2" variant="contained">Dm me</Button>
+      <HeaderNav clickHandler={clickHandler} to="contact">
+        <Button
+          className="w-48 place-self-center rounded-2xl py-2"
+          variant="contained"
+        >
+          Dm me
+        </Button>
+      </HeaderNav>
     </section>
   );
 };

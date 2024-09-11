@@ -46,9 +46,11 @@ const Header = ({ className, sideNavToggler, isSideNavShown }: HeaderProps) => {
                 {content}
               </HeaderNav>
             ))}
-            <button className="bg-primary/90 hover:bg-primary py-2 px-5 text-sm font-poppins flex items-center rounded-2xl text-background">
-              Dm me
-            </button>
+            <HeaderNav to="contact">
+              <button className="bg-primary/90 hover:bg-primary py-2 px-5 text-sm font-poppins flex items-center rounded-2xl text-background">
+                Dm me
+              </button>
+            </HeaderNav>
           </FlexBox>
 
           <span

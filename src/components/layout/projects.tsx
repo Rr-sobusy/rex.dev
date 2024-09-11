@@ -14,7 +14,7 @@ const Projects = () => {
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-primaryAccent to-primary tracking-tight">
           Showcasing
         </span>{" "}
-        some of the project that I have built.
+        some of the projects that I have built.
       </h5>
       <Separator />
       <div className="slider-container flex flex-col gap-11">

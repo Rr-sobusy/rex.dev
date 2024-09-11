@@ -25,7 +25,7 @@ const About = () => {
     handleSubmit,
   } = useForm<contactFormType>({ resolver: zodResolver(ContactFormType) });
 
-  const Stacks = Object.entries(MarqueLogos).map(([index, ctx]) => ctx );
+  const Stacks = Object.entries(MarqueLogos).map(([index, ctx]) => ctx);
 
   const submitHandler = async (data: contactFormType) => {
     const res = await fetch("/api/mailer", {
@@ -120,6 +120,7 @@ const About = () => {
           </Marquee>
         </div>
         <FlexBox
+          id="contact"
           flexDirection="mdRow"
           className="mt-[5rem] gap-5 md:gap-12 mx-5 md:mx-0"
         >
@@ -196,9 +197,9 @@ const About = () => {
               type="submit"
               className={`${
                 isSubmitting
-                  ? "bg-green-200"
-                  : "bg-gradient-to-r to-primary from-primaryAccent"
-              } bg py-3`}
+                  ? "to-primary/80 from-primaryAccent/80"
+                  : "to-primary from-primaryAccent"
+              } bg-gradient-to-r  py-3`}
               variant="contained"
               disabled={isSubmitting}
             >
