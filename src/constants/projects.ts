@@ -4,7 +4,7 @@ export const projects = [
   {
     projectName: "Taskifier",
     projectDescription:
-      "Taskifier lets you manage your tasks efficiently and synchronized. Has a minimalistic dashboard that displays your tasks' progress. List down all your tasks and corresponding sub-tasks then set the target deadline and you're good to go!",
+      "Taskifier lets you manage your tasks efficiently and synchronized. Has a minimalistic dashboard that displays your tasks' progress. List down all your tasks and corresponding sub-tasks, then set the target deadline and you're good to go!",
     snapshotsUrl: [
       "/projects/taskifier/1-min.png",
       "/projects/taskifier/2-min.png",
