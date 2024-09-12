@@ -2,13 +2,13 @@ import React from "react";
 import { Link, LinkProps } from "react-scroll";
 import { cn } from "@/lib/utils";
 
-type NavLinkProps = {
+interface NavLinkProps extends LinkProps {
   to: string;
   children: string | React.ReactNode;
   offset?: number;
   className?: string;
   clickHandler?: () => void;
-};
+}
 
 const HeaderNav = ({
   to,

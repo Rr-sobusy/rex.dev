@@ -38,6 +38,7 @@ const Header = ({ className, sideNavToggler, isSideNavShown }: HeaderProps) => {
           >
             {["Home", "Projects", "About"].map((content) => (
               <HeaderNav
+                activeClass="text-red-500"
                 key={content}
                 offset={-70}
                 className="relative after:absolute after:content-[''] after:-bottom-1 after:left-0 after:rounded-xl after:bg-primary after:h-[3px] after:w-0 after:duration-300 after:hover:w-full font-poppins"
