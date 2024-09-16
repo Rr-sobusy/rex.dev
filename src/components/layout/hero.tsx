@@ -75,7 +75,7 @@ const Hero = ({ ...props }: HeroProps) => {
             </TextEffect>
             <FlexBox className="mt-3 gap-3">
               <a
-                href="https://drive.google.com/file/d/1bS6z-oakl-IT5loL3yvTWelSd6dXIffD/view?usp=drive_link"
+                href="https://drive.google.com/file/d/16riQu-IivGL3z-bqViNEUeLla4uaT3fW/view?usp=drive_link"
                 target="_blank"
               >
                 <Button className="flex gap-2 items-center" variant="contained">
